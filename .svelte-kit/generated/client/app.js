@@ -4,13 +4,17 @@ export const nodes = [
 	() => import('./nodes/0'),
 	() => import('./nodes/1'),
 	() => import('./nodes/2'),
-	() => import('./nodes/3')
+	() => import('./nodes/3'),
+	() => import('./nodes/4'),
+	() => import('./nodes/5')
 ];
 
 export const server_loads = [0];
 
 export const dictionary = {
-		"/[[preview=preview]]": [~2],
+		"/confirm": [4],
+		"/hi": [5],
+		"/[[preview=preview]]": [2],
 		"/[[preview=preview]]/[uid]": [~3]
 	};
 

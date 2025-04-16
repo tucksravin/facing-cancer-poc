@@ -2,8 +2,13 @@
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/state';
 	import { repositoryName } from '$lib/prismicio';
+	import { cancerType } from '$lib/stores/cancerType';
+	import { cancerSubtype } from '$lib/stores/cancerSubtype';
 	import "../app.css";
   import LandscapeModal from '$lib/components/LandscapeModal.svelte';
+  import { onMount } from 'svelte';
+  import { beforeNavigate } from '$app/navigation';
+  import { get } from 'svelte/store';
 	/**
 	 * @typedef {Object} Props
 	 * @property {import('svelte').Snippet} [children]
@@ -11,24 +16,31 @@
 
 	/** @type {Props} */
 	let { children } = $props();
+	onMount(()=>{
+		if(page.url.searchParams.has('type')){
+			cancerType.set(page.url.searchParams.get('type')||'');
+		}
+
+		if(page.url.searchParams.has('subtype')){
+			cancerSubtype.set(page.url.searchParams.get('subtype')||'');
+		}
+	})
+
+	// beforeNavigate((event)=>{
+	// 	if(get(cancerType)!==''){
+	// 		event.to?.params.type = get(cancerType);
+	// 	}
+	// })
+
 </script>
 
 <svelte:head>
-	<title>{page.data.title}</title>
-	{#if page.data.meta_description}
-		<meta name="description" content={page.data.meta_description} />
-	{/if}
-	{#if page.data.meta_title}
-		<meta name="og:title" content={page.data.meta_title} />
-	{/if}
-	{#if page.data.meta_image}
-		<meta name="og:image" content={page.data.meta_image.url} />
-		<meta name="twitter:card" content="summary_large_image" />
-	{/if}
+	<title>Facing Cancer</title>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 </svelte:head>
-<main>
-	
+<main class="w-screen h-screen bg-canvas">
+	{@render children?.()}
 </main>
 <LandscapeModal />
 <PrismicPreview {repositoryName} />
