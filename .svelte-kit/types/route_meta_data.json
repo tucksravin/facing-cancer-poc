@@ -5,10 +5,22 @@
 	"/api/preview": [
 		"src/routes/api/preview/+server.js"
 	],
+	"/brain": [
+		"src/routes/+layout.server.ts"
+	],
+	"/choose": [
+		"src/routes/+layout.server.ts"
+	],
 	"/confirm": [
 		"src/routes/+layout.server.ts"
 	],
 	"/hi": [
+		"src/routes/+layout.server.ts"
+	],
+	"/leukemia": [
+		"src/routes/+layout.server.ts"
+	],
+	"/lung": [
 		"src/routes/+layout.server.ts"
 	],
 	"/[[preview=preview]]": [

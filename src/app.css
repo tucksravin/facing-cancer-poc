@@ -116,6 +116,11 @@ a, button{
 
 h1{
     font-family: 'new-kansas', sans-serif; 
+
+font-size: 100px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
 h2{
@@ -172,7 +177,7 @@ span{
 
 @media only screen and (max-width:1024px) {
     h1{
-        font-size: 30px;
+        font-size: 60px;
     }
     
     h2{

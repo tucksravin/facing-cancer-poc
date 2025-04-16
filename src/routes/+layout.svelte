@@ -39,7 +39,7 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 </svelte:head>
-<main class="w-screen h-screen bg-canvas ease-in-out duration-500">
+<main class="h-dvh w-dvw bg-canvas ease-in-out duration-500">
 	{@render children?.()}
 </main>
 <LandscapeModal />
