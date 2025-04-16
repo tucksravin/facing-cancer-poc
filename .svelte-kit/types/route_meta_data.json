@@ -13,9 +13,5 @@
 	],
 	"/[[preview=preview]]": [
 		"src/routes/+layout.server.ts"
-	],
-	"/[[preview=preview]]/[uid]": [
-		"src/routes/[[preview=preview]]/[uid]/+page.server.ts",
-		"src/routes/+layout.server.ts"
 	]
 }
