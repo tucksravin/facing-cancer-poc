@@ -1,5 +1,5 @@
 <script lang='ts'>
-import breast from '$lib/assets/images/breast.png';
+import breast from '$lib/assets/images/Breast.png';
   import { fade, fly } from 'svelte/transition';
 
 
