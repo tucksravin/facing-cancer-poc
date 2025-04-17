@@ -15,7 +15,7 @@
       { id: 'gbm', name: 'Brain', subtype: 'Glioblastoma Multiforme (GBM)', image: brain, route: 'brain' },
       { id: 'aml', name: 'Leukemia', subtype: 'Acute Myeloid Leukemia', image: leukemia, route: 'leukemia' },
       { id: 'sclc', name: 'Lung', subtype: 'Small Cell Lung Cancer', image: lung, route: 'lung' },
-      { id: 'breast', name: 'Breast', subtype: 'Triple Negative Breast Cancer', image: breast, route: 'breast' }
+      { id: 'tnbc', name: 'Breast', subtype: 'Triple Negative Breast Cancer', image: breast, route: 'breast' }
     ];
     
     // Current index for the slider

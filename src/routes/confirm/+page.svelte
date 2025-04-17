@@ -13,7 +13,7 @@
       { id: 'gbm', name: 'Brain Cancer', subtype: 'Glioblastoma Multiforme (GBM)', image: brain, route: 'brain' },
       { id: 'aml', name: 'Leukemia', subtype: 'Acute Myeloid Leukemia', image: leukemia, route: 'leukemia' },
       { id: 'sclc', name: 'Lung Cancer', subtype: 'Small Cell Lung Cancer', image: lung, route: 'lung' },
-      { id: 'breast', name: 'Breast Cancer', subtype: 'Triple Negative Breast Cancer', image: breast, route: 'breast' }
+      { id: 'tnbc', name: 'Breast Cancer', subtype: 'Triple Negative Breast Cancer', image: breast, route: 'breast' }
     ];
     
     // Find the current cancer type from the store
