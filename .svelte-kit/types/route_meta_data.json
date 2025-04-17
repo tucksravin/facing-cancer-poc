@@ -8,6 +8,9 @@
 	"/brain": [
 		"src/routes/+layout.server.ts"
 	],
+	"/breast": [
+		"src/routes/+layout.server.ts"
+	],
 	"/choose": [
 		"src/routes/+layout.server.ts"
 	],
