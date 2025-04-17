@@ -7,7 +7,7 @@
 </script>
 
     <section in:fly={{x:"100%"}} out:fade class="w-full h-full flex flex-col justify-center items-center gap-10 bg-dark text-white text-center relative overflow-hidden">
-        <div class="absolute left-1/2 bottom-1/2 lg:bottom-0 lg:left-0 -translate-x-1/2 translate-y-1/2 lg:-translate-x-1/5 lg:translate-y-1/5 w-[200%] lg:w-1/2">
+        <div class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 w-[200%] lg:w-[120%] lg:opacity-80 lg:rotate-90">
             <img src={Brain} alt="Brain" class="w-full" />
         </div>
 
