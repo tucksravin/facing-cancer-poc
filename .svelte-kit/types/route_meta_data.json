@@ -18,6 +18,7 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/hi": [
+		"src/routes/hi/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
 	"/leukemia": [

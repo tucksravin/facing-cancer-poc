@@ -1,6 +1,17 @@
 <script lang='ts'>
     import { onMount } from "svelte";
     import { fade, fly } from "svelte/transition";
+    import { cancerType } from "$lib/stores/cancerType";
+    import { cancerSubtype } from "$lib/stores/cancerSubtype";
+
+    const props = $props<{
+    data: {
+      cancerType: string;
+      cancerSubtype: string;
+    }
+  }>();
+
+   
   
     let slide = $state(0);
     let manual = $state(false);
@@ -41,6 +52,9 @@
     };
   
     onMount(() => {
+        cancerType.set(props.data.cancerType);
+        cancerSubtype.set(props.data.cancerSubtype);
+
         setTimeout(() => {
             slide++;
             startSlides();

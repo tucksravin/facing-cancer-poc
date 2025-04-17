@@ -15,7 +15,7 @@
 	import brainImage from '$lib/assets/images/glioblastoma.png';
 
 
-  let { children } = $props();
+  let { children, data } = $props();
   
 	// Create an array of image sources
 	const imagesToPreload = [breastImage, leukemiaImage, lungImage, brainImage];
@@ -33,12 +33,13 @@
 	  preloadImages();
 	  
 	  // Set initial values from URL if they exist
-	  if (page.url.searchParams.has('type')) {
-		cancerType.set(page.url.searchParams.get('type') || '');
+	  if (page.url.searchParams.has('type')||data.cancerType) {
+		cancerType.set(page.url.searchParams.get('type') || data.cancerType);
 	  }
-	  if (page.url.searchParams.has('subtype')) {
-		cancerSubtype.set(page.url.searchParams.get('subtype') || '');
+	  if (page.url.searchParams.has('subtype')||data.cancerSubtype) {
+		cancerSubtype.set(page.url.searchParams.get('subtype') || data.cancerSubtype);
 	  }
+
 	  
 	}
 	);

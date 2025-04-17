@@ -20,7 +20,7 @@ export const dictionary = {
 		"/breast": [4],
 		"/choose": [5],
 		"/confirm": [6],
-		"/hi": [7],
+		"/hi": [~7],
 		"/leukemia": [8],
 		"/lung": [9],
 		"/[[preview=preview]]": [~2]
