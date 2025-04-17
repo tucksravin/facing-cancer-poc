@@ -23,7 +23,7 @@ export const dictionary = {
 		"/hi": [7],
 		"/leukemia": [8],
 		"/lung": [9],
-		"/[[preview=preview]]": [2]
+		"/[[preview=preview]]": [~2]
 	};
 
 export const hooks = {
