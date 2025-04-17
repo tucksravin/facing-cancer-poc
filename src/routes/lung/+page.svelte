@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import Lung from '$lib/assets/images/lung.png';
+    import Lung from '$lib/assets/images/Lung.png';
   import { fade, fly } from 'svelte/transition';
 
 

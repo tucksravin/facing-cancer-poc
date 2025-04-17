@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import leukemia from '$lib/assets/images/leukemia.png';
+    import leukemia from '$lib/assets/images/Leukemia.png';
   import { fade, fly } from 'svelte/transition';
 
 
