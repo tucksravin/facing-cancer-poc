@@ -29,7 +29,7 @@
         {#if currentCancer}
         <div class='flex flex-col justify-center items-center gap-8 text-center'>
             <TriggerTransitionOnMount>
-                <p in:fly={{y:'10vh', duration:500, delay:200}}>Based on your link, we think this is the cancer your loved one is facing.</p>
+                <p in:fly={{y:'10vh', duration:500, delay:200}}>Based on your link, this is your loved one's diagnosis.</p>
             </TriggerTransitionOnMount>
             <TriggerTransitionOnMount>
                 <div in:fly={{y:'10vh', duration:500, delay:400}} class='bg-dark h-64 w-64 rounded-full flex justify-center items-center'>
