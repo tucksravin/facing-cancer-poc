@@ -1,12 +1,13 @@
 <script lang='ts'>
     import leukemia from '$lib/assets/images/Leukemia.png';
   import { fade, fly } from 'svelte/transition';
+  import { quadOut, quadIn } from 'svelte/easing';
 
 
 
 </script>
 
-    <section in:fly={{x:"100%"}} out:fade class="w-full h-full flex flex-col justify-center items-center gap-10 bg-dark text-white relative overflow-hidden">
+    <section in:fly={{easing:quadOut, x:'100%', duration:600}} out:fade={{easing:quadIn, duration:600}}  class="w-full h-full flex flex-col justify-center items-center gap-10 bg-dark text-white relative overflow-hidden">
         <div class="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/6 rotate-270 w-2/3">
             <img src={leukemia} alt="Leukemia" class="w-full h-auto" />
         </div>

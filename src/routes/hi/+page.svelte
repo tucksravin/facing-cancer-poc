@@ -3,6 +3,7 @@
     import { fade, fly } from "svelte/transition";
     import { cancerType } from "$lib/stores/cancerType";
     import { cancerSubtype } from "$lib/stores/cancerSubtype";
+  import { backInOut, quadInOut, quadIn, quadOut } from "svelte/easing";
 
     const props = $props<{
     data: {
@@ -18,9 +19,9 @@
     let progress = $state(0);
     let progressInterval: NodeJS.Timeout;
     let delayTimeout: NodeJS.Timeout;
-    const slideTime = 4000; // Time between slides in ms
+    const slideTime = 3600; // Time between slides in ms
     const progressStep = 10; // Update progress every 10ms
-    const transitionDelay = 1000; // Delay in ms before progress bar starts filling
+    const transitionDelay = 1200; // Delay in ms before progress bar starts filling
 
     const startSlides = () => {
         // Reset progress
@@ -77,53 +78,53 @@
 </script>
   
 <section class="w-full h-full flex flex-col justify-center items-center gap-12">
-    <div>
+    <div class='h-12'>
         {#if slide === 1}
-            <p in:fly={{y:'10vh', duration:500}} out:fly={{y:'-10vh', duration:500}}>Hi. We're here to help.</p>
+            <p in:fly={{easing:quadOut, y:'10vh', duration:1200}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>Hi. We're here to help.</p>
         {/if}
     </div>
-    <div class='h-36 lg:h-64 text-center relative w-full'>
+    <div class='h-52 lg:h-72 text-center relative w-full '>
         {#if slide===1}
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-                <h2 in:fly={{y:'10vh', duration:500, delay:100}} out:fly={{y:'-10vh', duration:500}}>Your loved one is </h2>
-                <h2 in:fly={{y:'10vh', duration:500, delay:100}} out:fly={{y:'-10vh', duration:500}} class='text-primary'>facing cancer.</h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:100}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>Your loved one is </h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:100}} out:fly={{easing:quadIn, y:'-10vh', duration:600}} class='text-primary'>facing cancer.</h2>
             </div>
         {:else if slide===2}
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-                <h2 in:fly={{y:'10vh', duration:500, delay:600}} out:fly={{y:'-10vh', duration:500}}>We're so sorry to</h2>
-                <h2 in:fly={{y:'10vh', duration:500, delay:600}} out:fly={{y:'-10vh', duration:500}}>hear that</h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>We're so sorry to</h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>hear that</h2>
             </div>
         {:else if slide===3}
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-                <h2 in:fly={{y:'10vh', duration:500, delay:600}} out:fly={{y:'-10vh', duration:500}}>A cancer diagnosis can  </h2>
-                <h2 in:fly={{y:'10vh', duration:500, delay:600}} out:fly={{y:'-10vh', duration:500}}>be scary and the future</h2>
-                <h2 in:fly={{y:'10vh', duration:500, delay:600}} out:fly={{y:'-10vh', duration:500}}>feels uncertain...</h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>A cancer diagnosis can  </h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>be scary and the future</h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>feels uncertain...</h2>
             </div>
         {:else if slide===4}
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-                <h2 in:fly={{y:'10vh', duration:500, delay:600}} out:fly={{y:'-10vh', duration:500}}>...and there's so much to </h2>
-                <h2 in:fly={{y:'10vh', duration:500, delay:600}} out:fly={{y:'-10vh', duration:500}}>try and understand.</h2>
-                <h2 in:fly={{y:'10vh', duration:500, delay:600}} out:fly={{y:'-10vh', duration:500}} class='text-primary'>We are here to help.</h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>...and there's so much to </h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>try and understand.</h2>
+                <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}} class='text-primary'>We are here to help.</h2>
             </div>
         {/if}
     </div>
-    <div>
+    <div class='h-12'>
         {#if slide===1}
         <div class='bump'>
-            <button in:fly={{y:'10vh', duration:500, delay:200}} out:fly={{y:'-10vh', duration:500}} onclick={() => {slide++; manual = false; startSlides();}} class="w-14 h-14 rounded-full bg-primary border-primary border-2 text-white hover:text-primary hover:bg-white active:text-white active:bg-primary transition duration-500" aria-label="next slide">
+            <button in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:200}} out:fly={{easing:quadIn, y:'-10vh', duration:600}} onclick={() => {slide++; manual = false; startSlides();}} class="w-14 h-14 rounded-full bg-primary border-primary border-2 text-white hover:text-primary hover:bg-white active:text-white active:bg-primary transition duration-1200" aria-label="next slide">
                 <i class="fa-light fa-arrow-right fa-2xl"> </i>
             </button>
         </div>
         {:else if slide===4}
         <div class='bump'>
-            <a in:fly={{y:'10vh', duration:500, delay:2000}} out:fly={{y:'-10vh', duration:500}} href='/confirm' class="flex items-center justify-center w-14 h-14 rounded-full bg-primary border-primary border-2 text-white hover:text-primary hover:bg-white active:text-white active:bg-primary transition duration-500" aria-label="next slide">
+            <a in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:2000}} out:fly={{easing:quadIn, y:'-10vh', duration:600}} href='/confirm' class="flex items-center justify-center w-14 h-14 rounded-full bg-primary border-primary border-2 text-white hover:text-primary hover:bg-white active:text-white active:bg-primary transition duration-1200" aria-label="next slide">
                 <i class="fa-light fa-arrow-right fa-2xl"> </i>
             </a>
         </div>
         {/if}
     </div>
     {#if slide > 1}
-        <div in:fly={{y:'10vh', duration:500, delay:700}} class='flex items-center justify-center gap-5 absolute left-1/2 -translate-x-1/2 bottom-13 {slide > 3 ? "pointer-events-none opacity-0 transition-opacity delay-1200" : ""}'>
+        <div in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:1000}} class='flex items-center justify-center gap-5 absolute left-1/2 -translate-x-1/2 bottom-13 {slide > 3 ? "pointer-events-none opacity-0 transition-opacity delay-1200" : ""}'>
             <!-- Progress indicators using translation instead of width -->
             <div class='relative h-2.5 w-13 bg-white rounded-full overflow-hidden'>
                 <div class='absolute h-full w-full bg-light rounded-full origin-left' 

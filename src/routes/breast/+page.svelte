@@ -1,12 +1,12 @@
 <script lang='ts'>
 import breast from '$lib/assets/images/Breast.png';
   import { fade, fly } from 'svelte/transition';
-
+import { quadOut, quadIn } from 'svelte/easing';
 
 
 </script>
 
-    <section in:fly={{x:"100%"}} out:fade class="w-full h-full flex flex-col justify-center items-center gap-10 bg-dark text-white text-center relative overflow-hidden">
+    <section in:fly={{easing:quadOut, x:'100%', duration:600}} out:fade={{easing:quadIn, duration:600}}  class="w-full h-full flex flex-col justify-center items-center gap-10 bg-dark text-white text-center relative overflow-hidden">
         <div class="absolute bottom-0 left-0 -translate-x-1/3 lg:-translate-x-1/5 lg:translate-y-1/5 w-full lg:w-1/2">
             <img src={breast} alt="breast" class="w-full" />
         </div>

@@ -9,6 +9,7 @@
   import { fly, fade } from 'svelte/transition';
   import { swipe } from "svelte-gestures";
   import type { SwipePointerEventDetail } from "svelte-gestures";
+  import { quadOut, quadIn } from 'svelte/easing';
   
   // Cancer types data
   const cancerTypes = [
@@ -99,17 +100,17 @@
 <section class="w-full h-full relative" use:swipe={()=>({ timeframe: 300, minSwipeDistance: 60 })} onswipe={handleSwipe}>
   <ContentWidth class="h-full flex flex-col justify-center items-center gap-12">
     <TriggerTransitionOnMount>
-      <h2 in:fly={{y:'10vh', duration:500}}>Let's Get Started</h2>
+      <h2 in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:300}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>Let's Get Started</h2>
     </TriggerTransitionOnMount>
     
     <div class='flex flex-col justify-center items-center gap-8 text-center'>
       <TriggerTransitionOnMount>
-        <p in:fly={{y:'10vh', duration:500, delay:200}}>Which type of cancer are we facing?</p>
+        <p in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>Which type of cancer are we facing?</p>
       </TriggerTransitionOnMount>
       
       <!-- Slider container -->
       <TriggerTransitionOnMount>
-        <div in:fly={{y:'10vh', duration:500, delay:400}} class="w-full max-w-xl">
+        <div in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:900}} out:fly={{easing:quadIn, y:'-10vh', duration:600}} class="w-full max-w-xl">
           <div class="relative">
             <!-- Cancer image display container -->
             <div class="relative h-64 w-64 mx-auto">
@@ -155,7 +156,7 @@
     </div>
 
     <TriggerTransitionOnMount>
-      <div class="fixed lg:hidden top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-4 items-center gap-4 w-screen z-10" in:fly={{y:'10vh', duration:500, delay:600}}>
+      <div class="fixed lg:hidden top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-4 items-center gap-4 w-screen z-10" in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:600}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>
         <div>
           <button 
             onclick={prevSlide} 
@@ -183,7 +184,7 @@
     
     <!-- Progress bar fixed to bottom -->
     <TriggerTransitionOnMount>
-      <div class="fixed bottom-8 left-0 right-0 flex justify-center items-center gap-4 z-10" in:fly={{y:'10vh', duration:500, delay:600}}>
+      <div class="fixed bottom-8 left-0 right-0 flex justify-center items-center gap-4 z-10" in:fly={{easing:quadOut, y:'10vh', duration:1200, delay:1200}} out:fly={{easing:quadIn, y:'-10vh', duration:600}}>
         <button 
           onclick={prevSlide} 
           class="hidden lg:flex items-center justify-center w-10 h-10 rounded-full text-light hover:text-primary transition"

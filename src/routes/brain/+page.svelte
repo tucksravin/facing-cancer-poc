@@ -1,12 +1,13 @@
 <script lang='ts'>
     import Brain from '$lib/assets/images/glioblastoma.png';
   import { fade, fly } from 'svelte/transition';
+  import { quadOut, quadIn } from 'svelte/easing';
 
 
 
 </script>
 
-    <section in:fly={{x:"100%"}} out:fade class="w-full h-full flex flex-col justify-center items-center gap-10 bg-dark text-white text-center relative overflow-hidden">
+    <section in:fly={{easing:quadOut, x:'100%', duration:600}} out:fade={{easing:quadIn, duration:600}} class="w-full h-full flex flex-col justify-center items-center gap-10 bg-dark text-white text-center relative overflow-hidden">
         <div class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 w-[200%] lg:w-[120%] lg:opacity-80 lg:rotate-90">
             <img src={Brain} alt="Brain" class="w-full" />
         </div>
