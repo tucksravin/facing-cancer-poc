@@ -14,6 +14,9 @@
 	"/choose": [
 		"src/routes/+layout.server.ts"
 	],
+	"/colon": [
+		"src/routes/+layout.server.ts"
+	],
 	"/confirm": [
 		"src/routes/+layout.server.ts"
 	],
@@ -25,6 +28,12 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/lung": [
+		"src/routes/+layout.server.ts"
+	],
+	"/prostate": [
+		"src/routes/+layout.server.ts"
+	],
+	"/testicular": [
 		"src/routes/+layout.server.ts"
 	],
 	"/[[preview=preview]]": [

@@ -10,7 +10,10 @@ export const nodes = [
 	() => import('./nodes/6'),
 	() => import('./nodes/7'),
 	() => import('./nodes/8'),
-	() => import('./nodes/9')
+	() => import('./nodes/9'),
+	() => import('./nodes/10'),
+	() => import('./nodes/11'),
+	() => import('./nodes/12')
 ];
 
 export const server_loads = [0];
@@ -19,10 +22,13 @@ export const dictionary = {
 		"/brain": [3],
 		"/breast": [4],
 		"/choose": [5],
-		"/confirm": [6],
-		"/hi": [~7],
-		"/leukemia": [8],
-		"/lung": [9],
+		"/colon": [6],
+		"/confirm": [7],
+		"/hi": [~8],
+		"/leukemia": [9],
+		"/lung": [10],
+		"/prostate": [11],
+		"/testicular": [12],
 		"/[[preview=preview]]": [~2]
 	};
 

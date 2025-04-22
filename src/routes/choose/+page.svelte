@@ -3,6 +3,9 @@
   import leukemia from '$lib/assets/images/Leukemia.png';
   import lung from '$lib/assets/images/Lung.png';
   import brain from '$lib/assets/images/glioblastoma.png';
+  import colon from '$lib/assets/images/Colon.png';
+  import prostate from '$lib/assets/images/Prostate.png';
+  import testicular from '$lib/assets/images/Testicular.png';
   import TriggerTransitionOnMount from '$lib/components/Animation/TriggerTransitionOnMount.svelte';
   import ContentWidth from '$lib/components/ContentWidth/ContentWidth.svelte';
   import { cancerSubtype } from '$lib/stores/cancerSubtype';
@@ -14,9 +17,12 @@
   // Cancer types data
   const cancerTypes = [
     { id: 'gbm', name: 'Brain', subtype: 'Glioblastoma Multiforme (GBM)', image: brain, route: 'brain' },
+    { id: 'tnbc', name: 'Breast', subtype: 'Triple Negative Breast Cancer', image: breast, route: 'breast' },
+    { id: 'crac', name: 'Colon', subtype: 'Colorectal Adenocarcinoma', image: colon, route: 'colon' },
     { id: 'aml', name: 'Leukemia', subtype: 'Acute Myeloid Leukemia', image: leukemia, route: 'leukemia' },
     { id: 'sclc', name: 'Lung', subtype: 'Small Cell Lung Cancer', image: lung, route: 'lung' },
-    { id: 'tnbc', name: 'Breast', subtype: 'Triple Negative Breast Cancer', image: breast, route: 'breast' }
+    { id: 'pac', name: 'Prostate', subtype: 'Prostatic Adenocarcinoma', image: prostate, route: 'prostate' },
+    { id: 'tsm', name: 'Testicular', subtype: 'Testicular Seminoma', image: testicular, route: 'testicular' },
   ];
   
   // State variables with $state syntax
