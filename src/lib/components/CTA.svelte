@@ -38,7 +38,7 @@
          <div class='flex flex-col justify-center items-center gap-3'>
            <a 
              href='tel:310.529.1631' 
-             class="z-10 cursor-pointer w-14 flex flex-col justify-center items-center h-14 rounded-full bg-[#E31937] border-[#E31937] border-2 text-white hover:text-[#E31937] hover:bg-white transition duration-300" 
+             class="z-10 cursor-pointer w-14 flex flex-col justify-center items-center h-14 rounded-full bg-[#888888] border-[#888888] border-2 text-white hover:text-[#E31937] hover:border-[#E31937] hover:bg-white transition duration-300" 
              aria-label="call">
              <i class="fa-sharp fa-mobile fa-2xl"></i>
            </a>
@@ -47,7 +47,7 @@
          <div class='flex flex-col justify-center items-center gap-3'>
            <a 
              href='mailto:info@reddoorla.com' 
-             class="z-10 cursor-pointer w-14 flex flex-col justify-center items-center h-14 rounded-full bg-[#E31937] border-[#E31937] border-2 text-white hover:text-[#E31937] hover:bg-white transition duration-300" 
+             class="z-10 cursor-pointer w-14 flex flex-col justify-center items-center h-14 rounded-full bg-[#888888] border-[#888888] border-2 text-white hover:text-[#E31937] hover:border-[#E31937] hover:bg-white transition duration-300" 
              aria-label="email">
              <i class="fa-sharp fa-envelope fa-2xl"></i>
            </a>
@@ -56,7 +56,7 @@
          <div class='flex flex-col justify-center items-center gap-3'>
            <a 
              href='https://reddoorla.com/' 
-             class="z-10 cursor-pointer w-14 flex flex-col justify-center items-center h-14 rounded-full bg-[#E31937] border-[#E31937] border-2 text-white hover:text-[#E31937] hover:bg-white transition duration-300" 
+             class="z-10 cursor-pointer w-14 flex flex-col justify-center items-center h-14 rounded-full bg-[#888888] border-[#888888] border-2 text-white hover:text-[#E31937] hover:border-[#E31937] hover:bg-white transition duration-300" 
              aria-label="website">
              <i class="fa-sharp fa-globe fa-2xl"></i>
            </a>
